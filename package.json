@@ -25,7 +25,10 @@
     "aria"
   ],
   "license": "MIT",
-  "repository": "git@github.com:KonnorRogers/mix-town.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KonnorRogers/mix-town.git"
+  },
   "bugs": {
     "url": "https://github.com/KonnorRogers/mix-town/issues"
   },
