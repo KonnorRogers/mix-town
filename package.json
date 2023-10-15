@@ -1,0 +1,42 @@
+{
+  "name": "mix-town",
+  "version": "0.0.0",
+  "description": "A variety of simple components that match an aria-role",
+  "main": "./exports/index.js",
+  "module": "./exports/index.js",
+  "types": "./exports/index.d.ts",
+  "exports": {
+    ".": "./exports/index.js"
+  },
+  "type": "module",
+  "files": [
+    "exports",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rimraf -g \"./exports/**/*.d.ts\" && tsc",
+    "deploy:patch": "npm run build && npm version patch && npm publish && git push --follow-tags",
+    "deploy:minor": "npm run build && npm version minor && npm publish && git push --follow-tags",
+    "deploy:major": "npm run build && npm version major && npm publish && git push --follow-tags"
+  },
+  "keywords": [
+    "web-components",
+    "aria"
+  ],
+  "license": "MIT",
+  "repository": "git@github.com:KonnorRogers/mix-town.git",
+  "bugs": {
+    "url": "https://github.com/KonnorRogers/mix-town/issues"
+  },
+  "homepage": "https://github.com/KonnorRogers/mix-town",
+  "author": "KonnorRogers <konnor5456@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "mix-town": "link:.",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  }
+}
