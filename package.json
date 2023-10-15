@@ -21,8 +21,9 @@
     "deploy:major": "npm run build && npm version major && npm publish && git push --follow-tags"
   },
   "keywords": [
-    "web-components",
-    "aria"
+    "mixins",
+    "utility",
+    "helper"
   ],
   "license": "MIT",
   "repository": {
