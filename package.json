@@ -1,6 +1,6 @@
 {
   "name": "mix-town",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A super tiny utility library to make mixins not look like Clojure",
   "main": "./exports/index.js",
   "module": "./exports/index.js",
