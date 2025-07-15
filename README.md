@@ -10,6 +10,23 @@ npm install mix-town
 
 ## Usage
 
+Mixins will get applied "in order" they are added. 
+
+So for example:
+
+```js
+const { ctor } = mix(Base)
+  .with(Mixin1)
+  .with(Mixin2)
+
+class extends ctor {}
+```
+
+Will be the equivalent of:
+
+```js
+class extends Mixin2(Mixin1(Base)) {}
+```
 
 ### TypeScript
 
@@ -44,7 +61,7 @@ const base = mix(HTMLElement)
 class MyClass1 extends base {}
 
 // Equivalent without the `mix` helper.
-class MyClass2 extends Walkable(Jumpable(HTMLElement)) {}
+class MyClass2 extends Jumpable(Walkable(HTMLElement)) {}
 ```
 
 ### JSDOC
@@ -86,5 +103,5 @@ const base = mix(HTMLElement)
 class MyClass1 extends base {}
 
 // Equivalent without the helper.
-class MyClass2 extends Walkable(Jumpable(HTMLElement)) {}
+class MyClass2 extends Jumpable(Walkable(HTMLElement)) {}
 ```
